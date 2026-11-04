@@ -133,3 +133,83 @@ footer {
     padding: 8px 6px;
   }
 }
+
+/* 9. アクセス解析の同意バナー */
+
+#kr-consent-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 760px;
+  box-sizing: border-box;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #d9dee4;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+}
+
+/* 非表示時は確実に隠す */
+#kr-consent-banner[hidden] {
+  display: none;
+}
+
+.kr-consent-inner p {
+  margin: 8px 0;
+}
+
+.kr-consent-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.kr-consent-actions button {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border: 1px solid #17618a;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 拒否ボタン */
+.kr-consent-actions [data-choice="denied"] {
+  background: #ffffff;
+  color: #17618a;
+}
+
+/* 許可ボタン */
+.kr-consent-actions [data-choice="granted"] {
+  background: #17618a;
+  color: #ffffff;
+}
+
+.kr-consent-actions button:focus-visible {
+  outline: 3px solid #e86b70;
+  outline-offset: 3px;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+  #kr-consent-banner {
+    bottom: 12px;
+    padding: 16px;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .kr-consent-actions {
+    flex-direction: column;
+  }
+
+  .kr-consent-actions button {
+    width: 100%;
+  }
+}
+
