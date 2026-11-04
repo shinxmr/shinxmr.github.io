@@ -1,0 +1,135 @@
+
+/* KR Travel 共通デザイン */
+
+/* 1. ページ全体 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Noto Sans JP", sans-serif;
+  line-height: 1.85;
+  color: #30343b;
+  background-color: #ffffff;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 2. ヘッダー */
+header {
+  border-bottom: 3px solid #e86b70;
+  padding-bottom: 16px;
+  margin-bottom: 36px;
+}
+
+header a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 3. 見出し */
+h1 {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 52px;
+  padding: 10px 14px;
+  border-left: 4px solid #e86b70;
+  background-color: #fff5f5;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+/* 4. 本文とリスト */
+p {
+  margin: 16px 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+}
+
+/* 5. リンク */
+a {
+  color: #17618a;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #b64d57;
+}
+
+/* 6. 表 */
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+th, td {
+  border: 1px solid #d9dee4;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+thead th {
+  background-color: #fff0f1;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fb;
+}
+
+/* 7. フッター */
+footer {
+  border-top: 1px solid #e2e5e9;
+  margin-top: 64px;
+  padding-top: 20px;
+  color: #68717b;
+  font-size: 0.875rem;
+}
+
+/* 8. スマートフォン対応 */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 8px 6px;
+  }
+}
